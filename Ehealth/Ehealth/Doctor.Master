@@ -1,0 +1,74 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Doctor.Master.cs" Inherits="Ehealth.DoctorPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Welcome to the Doctor Portal</title>
+    
+    <script type="text/javascript" src="JavaScript/jquery-1.3.2.min.js"></script>
+
+    <script type="text/javascript">
+        function mainmenu() {
+            $("#nav ul").css({ display: "none" });
+            $("# nav li").hover(function(){
+                $(this.find('ul:first').css({visibility: "visible", display :"none"}).show(400);
+            }
+            , function ()
+            {
+                $(this).find('ul:first').css({visibility : "hidden"});
+            });
+        }
+        $(document).ready(function(){
+            mainmenu();
+        });
+        </script>
+
+
+    <link rel="stylesheet" type="text/css" href="~/Styles/StyleSheet_DoctorPortal.css"/>
+    
+</head>
+<body>
+    <form id="form1" runat="server">
+      <div id ="wrapper">
+          <div id ="banner">
+              </div>
+
+          <div id ="navigation">
+              <ul id ="nav">
+                  <li><a href="http://localhost:49617/EHealth/DoctorHomePage.aspx"> Home </a></li>
+                  <li><a href="http://localhost:49617/EHealth/Doctor_AppointmentView.aspx"> Appointments </a></li>
+                  <li><a href="http://localhost:49617/EHealth/CreatePrescription.aspx"> Create Prescription </a></li>
+                  <li><a href="#"> Logout </a>
+                 
+                  
+                  </ul>
+              </div>
+
+          <div id="content_area">
+              <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                  <img src="~/Images/HomeImage.jpg" runat="server" class="imgLeft" />
+                  <p>
+                      The human life on the earth is full of pleasures and sorrows, ups and downs, strength and weakness and health and illness like day and night these happenings are inherent in everyone’s life cycle. But it is silver lining that there are noble people who work all their lives to mitigate the sufferings of the others. Among them, the profession of doctors is perhaps most respected for service to the society.</p>
+                  <p>
+                      The doctor works to prevent spread of the epidemics. Every now and then dangerous diseases grab the humanity. It is the doctor who finds the cure. Sometimes it may take years of painstaking work and research to find the cure, but ultimately the success is achieved.</p>
+                  <p>
+                      The doctor works to prevent spread of the epidemics. Every now and then dangerous diseases grab the humanity. It is the doctor who finds the cure. Sometimes it may take years of painstaking work and research to find the cure, but ultimately the success is achieved.</p>
+                  <img src="~/Images/Doctor.jpg" runat="server" class="imgLeft" />
+                  <p>
+                      The doctor works to prevent spread of the epidemics. Every now and then dangerous diseases grab the humanity. It is the doctor who finds the cure. Sometimes it may take years of painstaking work and research to find the cure, but ultimately the success is achieved.</p>
+
+                  
+              </asp:ContentPlaceHolder>
+              </div>
+          <div id ="sidebar">
+
+          </div>
+          <div id ="footer">
+              <p>All rights Reserved.</p>
+              </div>
+
+    </form>
+</body>
+</html>
+
